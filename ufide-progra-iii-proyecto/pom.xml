@@ -23,6 +23,11 @@
             <version>${jakartaee}</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>  <!-- Se agrega aqui-->
+            <groupId>org.primefaces</groupId>  
+            <artifactId>primefaces</artifactId>
+            <version>7.0</version>
+        </dependency>  <!--hasta aqui -->
     </dependencies>
     
      <build>
@@ -74,4 +79,12 @@
             </plugin>
         </plugins>
     </build>
+     <repositories>   <!--Se agrega esto de aqui a  -->
+        <repository>
+            <url>http://repository.primefaces.org/</url>
+            <id>PrimeFaces-maven-lib</id>
+            <layout>default</layout>
+            <name>Repository for library PrimeFaces-maven-lib</name>
+        </repository>
+    </repositories>  <!-- aqui -->
 </project>
