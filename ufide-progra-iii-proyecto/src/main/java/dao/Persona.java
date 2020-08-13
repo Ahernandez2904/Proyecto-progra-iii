@@ -7,7 +7,9 @@ public class Persona {   //atributos que vayamos a necesitar, getter and setter
     private String apellido1;
     private String apellido2;
     private String identificacion;
+    private String ruta;
 
+ 
     public String getNombre() {
         return nombre;
     }
@@ -38,6 +40,13 @@ public class Persona {   //atributos que vayamos a necesitar, getter and setter
 
     public void setIdentificacion(String identificacion) {
         this.identificacion = identificacion;
+    }
+      public String getRuta() {
+        return ruta;
+    }
+
+    public void setRuta(String ruta) {
+        this.ruta = ruta;
     }
 }
 

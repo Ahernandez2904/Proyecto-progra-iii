@@ -8,7 +8,7 @@ package dao;
 // POJO = Plain Old Java Object: Proposito tener atributos y metodos, anotaciones son las que viene con el @ 
 
 public class Chofer {
-       private String nombre;
+    private String nombre;
     private String apellido1;
     private String apellido2;
     private String identificacion;
