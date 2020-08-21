@@ -1,55 +1,30 @@
-//Presenter
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package com;
 
-import dao.Persona;   //importar
-import dao.PersonaRepositorio;   //importar
+
+import dao.Chofer;
+import dao.ChoferRepositorio;
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
 
-@Named(value = "ingresar")   //anotaciones que cambian funcionamiento de la clase
+
+@Named(value = "ingresar")
 @RequestScoped
-public class Ingresar extends Persona {  //extiende a clase persona y si sale bombillo se importa la clase
+public class Ingresar extends Chofer {
 
-    private String mensajeIdentificacion;   //***AGREGO ESTOS DOS ATRIBUTOS***
-    private Boolean bloquearBoton;  //**ESTE TAMBIEN JUNTO CON LOS GET AND SET
-
-    public String getMensajeIdentificacion() {
-        return mensajeIdentificacion;
-    }
-
-    public void setMensajeIdentificacion(String mensajeIdentificacion) {
-        this.mensajeIdentificacion = mensajeIdentificacion;
-    }
-
-    public Boolean getBloquearBoton() {
-        return bloquearBoton;
-    }
-
-    public void setBloquearBoton(Boolean bloquearBoton) {
-        this.bloquearBoton = bloquearBoton;
-    }
-
-    public Ingresar() {
-    }
-
-    public String guardarInformacion() {  //Metodo para 
-        PersonaRepositorio.agregarPersona(this);
-        return "verPersonas";
+    /**
+     * Creates a new instance of Ingresar
+     */
+    public Ingresar() {   
     }
     
-    public void validar(){    //****TAMBIEN AGREGO ESTE METODO**** PARA VALIDAR QUE LA IDENTIFICACION NO EXISTA
-       String identificacion = this.getIdentificacion();
-        if (PersonaRepositorio.existeIndentificacion(identificacion)) {
-            this.mensajeIdentificacion = "Identificaci[on ya existe";
-            this.bloquearBoton=true;
-            
-        }else{
-            this.bloquearBoton = false;
-        }
+    public String guardarInformacion(){   //ver varios valores
+        ChoferRepositorio choferRepositorio = new ChoferRepositorio();  //lo llamamos del metodo ingresar.xhtml va a recibir los valores y lo va ir a guardar en Base de Datos, crearPersona ingresa los valores a DB 
+        choferRepositorio.crearChofer(this);
+        return "verPersonas";
     }
 }
-
-//SourcPackages +New+ JSF CDI Bean + Class Name: Ingresar + Package: com y Scope:Request y Finish
-//Una vista para un Presentar, vista ingresar junto con com:Ingresar
-//creamos la vista ingresar.xhtml
-

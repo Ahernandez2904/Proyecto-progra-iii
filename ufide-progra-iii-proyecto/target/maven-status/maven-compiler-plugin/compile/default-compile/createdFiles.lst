@@ -1,7 +1,9 @@
-com\VerPersonas.class
-dao\PersonaRepositorio.class
+dao\ChoferRepositorio.class
+dao\Ruta.class
+com\VerChofer.class
+dao\Conexion.class
+dao\Bus.class
 prograiii\ufide\progra\iii\proyecto\resources\JavaEE8Resource.class
 com\Ingresar.class
 dao\Chofer.class
-dao\Persona.class
 prograiii\ufide\progra\iii\proyecto\JAXRSConfiguration.class

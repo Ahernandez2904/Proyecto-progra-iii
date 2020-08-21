@@ -3,24 +3,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
-
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <meta http-equiv="refresh" content="0; url=faces/ingresar.xhtml" />
+    </head>
     <body>
         <ui:composition template="./plantilla/plantilla.xhtml">
             <ui:define name="content">
                 <h:form class="container" style="width: 100%">
-                    <div class="form-group row">  <!--Esto es para recibir la informacion y que el cliente llene todos los datos -->
+                    <div class="form-group-row">
                         <h:outputLabel value="Identificación" for="id" class="col-sm-2 col-form-label"/>
                         <div class="col-sm-3">
                             <h:inputText id="id" required="true" requiredMessage="Campo Obligatorio"
-                                         value="#{ingresar.identificacion}" class="form-control">  <!--***Evento disparador blur, id nombre en la linea de abajo es para validar y usar trigger asincrono-->
-                                <p:ajax event ="blur" process="id nombre" update="mensajeIdentificacion bloquearBoton" listener="#{ingresar.validar()}"/>  <!--Listener metodo para mandar a llamar -->
-                            </h:inputText> <!-- ***Se cierra con una back slash*** -->
-                            <h:message for="id" class="text-danger"/>   <!--****Se agrega esto**** -->
-                            <h:outputText id="mensajeIdentificacion" value="#{ingresar.mensajeIdentificacion}" class="text-danger"/> <!--****SE AGREGA ESTO*** -->
+                                         value="#{ingresar.identificacion}" class="form-control">
+                            </h:inputText>
+                            <h:message for="id" class="text-danger"/>
                         </div>
                     </div>
-                    <div class="form-group row">
+                    <div class="form-group-row">
                         <h:outputLabel value="Nombre" for="nombre" class="col-sm-2 col-form-label"/>
                         <div class="col-sm-3">
                             <h:inputText id="nombre" required="true" requiredMessage="Campo Obligatorio"
@@ -28,45 +28,28 @@
                             <h:message for="nombre" class="text-danger"/>
                         </div>
                     </div>
-                    <div class="form-group row">
-                        <h:outputLabel value="Apellido 1" for="apellido1" class="col-sm-2 col-form-label"/>
+                    <div class="form-group-row">
+                        <h:outputLabel value="Primer Apellido" for="primerApellido" class="col-sm-2 col-form-label"/>
                         <div class="col-sm-3">
-                            <h:inputText id="apellido1" required="true" requiredMessage="Campo Obligatorio"
+                            <h:inputText id="primerApellido" required="true" requiredMessage="Campo Obligatorio"
                                          value="#{ingresar.apellido1}" class="form-control"/>
-                            <h:message for="apellido1" class="text-danger"/>
+                            <h:message for="primerApellido" class="text-danger"/>
                         </div>
                     </div>
-                    <div class="form-group row">
-                        <h:outputLabel value="Apellido 2" for="apellido2" class="col-sm-2 col-form-label"/>
+                    <div class="form-group-row">
+                        <h:outputLabel value="Segundo Apellido" for="segundoApellido" class="col-sm-2 col-form-label"/>
                         <div class="col-sm-3">
-                            <h:inputText id="apellido2" required="true" requiredMessage="Campo Obligatorio"
+                            <h:inputText id="segundoApellido" required="true" requiredMessage="Campo Obligatorio"
                                          value="#{ingresar.apellido2}" class="form-control"/>
-                            <h:message for="apellido2" class="text-danger"/>
+                            <h:message for="segundoApellido" class="text-danger"/>
                         </div>
                     </div>
-                    <div class="form-group row">
-                        <h:outputLabel value="Ruta" for="ruta" class="col-sm-2 col-form-label"/>
-                        <div class="col-sm-3">
-                            <h:inputText id="ruta" required="true" requiredMessage="Campo Obligatorio"
-                                         value="#{ingresar.ruta}" class="form-control"/>
-                            <h:message for="ruta" class="text-danger"/>
-                        </div>
-                    </div>
-                    <div style="text-align: center">  <!--****SE CAMBIA A BOTON -->
+                    <div style="text-align: center">
                         <h:commandButton id="bloquearBoton" value="Guardar" action="#{ingresar.guardarInformacion()}"
-                                         class="btn btn-primary" disabled="#{ingresar.bloquearBoton}"/>
+                                         class="btn btn-primary"/>
                     </div>
                 </h:form>
             </ui:define>
         </ui:composition>
     </body>
 </html>
-
-
-<!-- Web Pages, New, Other, JavaServerFaces, Facelets Template Client, Next,File Name: ingresar, Template+ Browse+ plantilla.xhtml + solo marcamos la de content+ Finish -->
-<!-- Nos vamos a WEB-INF y ahi en web.xml para poner la pagina principal del proyecto-->
-<!-- Despues de aqui hacemos la clas verPersonas del com-->
-
-
-
-

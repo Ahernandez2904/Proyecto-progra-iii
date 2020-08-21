@@ -1,16 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dao;
 
 // POJO = Plain Old Java Object: Proposito tener atributos y metodos, anotaciones son las que viene con el @ 
-
 public class Chofer {
+
     private String nombre;
     private String apellido1;
     private String apellido2;
+    private int IdChofer;
     private String identificacion;
     private String ruta;
 
@@ -38,12 +34,12 @@ public class Chofer {
         this.apellido2 = apellido2;
     }
 
-    public String getIdentificacion() {
-        return identificacion;
+    public int getIdChofer() {
+        return IdChofer;
     }
 
-    public void setIdentificacion(String identificacion) {
-        this.identificacion = identificacion;
+    public void setIdChofer(int IdChofer) {
+        this.IdChofer = IdChofer;
     }
 
     public String getRuta() {
@@ -53,7 +49,13 @@ public class Chofer {
     public void setRuta(String ruta) {
         this.ruta = ruta;
     }
-    
-    
-    
+
+    public String getIdentificacion() {
+        return identificacion;
+    }
+
+    public void setIdentificacion(String identificacion) {
+        this.identificacion = identificacion;
+    }
+
 }

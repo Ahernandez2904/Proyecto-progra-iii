@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <body>
+
+        <ui:composition template="./plantilla/plantilla.xhtml">
+
+            <ui:define name="content">
+                <form action="action_page.php" method="post">
+                    <div class="imgcontainer">
+                        <img src="img_avatar2.png" alt="Avatar" class="avatar">
+                    </div>
+
+                    <div class="container">
+                        <label for="user"><b>Usuario</b></label>
+                        <input type="text" placeholder="Ingrese Usuario" name="user" required/>
+
+                            <label for="psw"><b>Contrase;a</b></label>
+                            <input type="password" placeholder="Ingrese Contrase;a" name="psw" required/>
+                            <button type="submit">Ingresar</button>
+                            <label>
+                                <input type="checkbox" checked="checked" name="recordar"/> Recuperar contrase;a
+                            </label>
+                    </div>
+                    <div class="container" style="background-color:#f1f1f1">
+                        <button type="button" class="cancelbtn">Cancelar</button>
+                        <span class="psw">Olvidar <a href="#">password?</a></span>
+                    </div>
+                </form>
+                
+            </ui:define>
+        </ui:composition>
+
+    </body>
+</html>
