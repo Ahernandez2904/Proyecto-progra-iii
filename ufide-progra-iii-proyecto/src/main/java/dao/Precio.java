@@ -62,14 +62,19 @@ public class Precio {
         this.oro = oro;
     }
 
-    public void cobrar() {
+    public void cobrarMenor() {
 
         int menor = Integer.parseInt(this.getMenor());
         this.costo = String.valueOf(menor * 350);
 
+    }
+
+    public void cobrarOro() {
         int oro = Integer.parseInt(this.getOro());
         this.costoCiudadano = String.valueOf(oro * 450);
+    }
 
+    public void cobrarAdulto() {
         int mayor = Integer.parseInt(this.getMayor());
         this.costoAdulto = String.valueOf(mayor * 550);
     }

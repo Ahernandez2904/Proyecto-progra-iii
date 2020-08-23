@@ -18,19 +18,24 @@
     
     <dependencies>
         <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
-            <version>${jakartaee}</version>
-            <scope>provided</scope>
+            <groupId>org.glassfish</groupId>
+            <artifactId>javax.faces</artifactId>
+            <version>2.2.7</version>
         </dependency>
         <dependency>  <!-- Se agrega aqui-->
             <groupId>org.primefaces</groupId>  
             <artifactId>primefaces</artifactId>
             <version>7.0</version>
         </dependency>  <!--hasta aqui -->
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>${jakartaee}</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
     
-     <build>
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -79,7 +84,7 @@
             </plugin>
         </plugins>
     </build>
-     <repositories>   <!--Se agrega esto de aqui a  -->
+    <repositories>   <!--Se agrega esto de aqui a  -->
         <repository>
             <url>http://repository.primefaces.org/</url>
             <id>PrimeFaces-maven-lib</id>

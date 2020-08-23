@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <body>
+        <ui:composition template="./plantilla/plantilla.xhtml">
+            <ui:define name="content">
+                <h:form class="container" style="width: 100%">
+                    <div class="form-group-row">
+                        <h:outputLabel value="Identificación" for="id" class="col-sm-2 col-form-label"/>
+                        <div class="col-sm-3">
+                            <h:inputText id="buscarId" required="true" requiredMessage="Campo Obligatorio"
+                                         value="#{buscar.identificacionBuscar}" class="form-control">
+                            </h:inputText>
+                            <h:message for="id" class="text-danger"/>
+                        </div>
+                    </div>
+                    <div style="text-align: center">
+                        <h:commandButton id="buscar" value="Buscar" action="#{buscar.buscarIdentificacion()}"
+                                         class="btn btn-primary"/>
+                    </div>
+                </h:form>
+                <h:form>
+                    <h:inputHidden value="#{buscar.idPersona}"/>
+                    <div class="form-group-row">
+                        <h:outputLabel value="Identificación" for="id" class="col-sm-2 col-form-label"/>
+                        <div class="col-sm-3">
+                            <h:inputText id="id" required="true" requiredMessage="Campo Obligatorio"
+                                         value="#{buscar.identificacion}" class="form-control">
+                            </h:inputText>
+                            <h:message for="id" class="text-danger"/>
+                        </div>
+                    </div>
+                    <div class="form-group-row">
+                        <h:outputLabel value="Nombre" for="nombre" class="col-sm-2 col-form-label"/>
+                        <div class="col-sm-3">
+                            <h:inputText id="nombre" required="true" requiredMessage="Campo Obligatorio"
+                                         value="#{buscar.nombre}" class="form-control"/>
+                            <h:message for="nombre" class="text-danger"/>
+                        </div>
+                    </div>
+                    <div class="form-group-row">
+                        <h:outputLabel value="Primer Apellido" for="primerApellido" class="col-sm-2 col-form-label"/>
+                        <div class="col-sm-3">
+                            <h:inputText id="primerApellido" required="true" requiredMessage="Campo Obligatorio"
+                                         value="#{buscar.apellido1}" class="form-control"/>
+                            <h:message for="primerApellido" class="text-danger"/>
+                        </div>
+                    </div>
+                    <div class="form-group-row">
+                        <h:outputLabel value="Segundo Apellido" for="segundoApellido" class="col-sm-2 col-form-label"/>
+                        <div class="col-sm-3">
+                            <h:inputText id="segundoApellido" required="true" requiredMessage="Campo Obligatorio"
+                                         value="#{buscar.apellido2}" class="form-control"/>
+                            <h:message for="segundoApellido" class="text-danger"/>
+                        </div>
+                    </div>
+                    <div style="text-align: center">
+                        <h:commandButton value="Eliminar" action="#{buscar.eliminarPersona()}" class="btn btn-danger"
+                                         style="margin-right: 15px;"/>
+                        <h:commandButton value="Actualizar" action="#{buscar.actualizarPersona()}" class="btn btn-secondary"/>
+                    </div>
+                </h:form>
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>

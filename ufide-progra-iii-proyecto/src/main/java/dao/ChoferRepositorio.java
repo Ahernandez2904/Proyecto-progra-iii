@@ -37,7 +37,7 @@ public class ChoferRepositorio {
             sentencia.setString(2, chofer.getNombre());  //estos es para obtener valores ? segundo
             sentencia.setString(3, chofer.getApellido1());  //? tercerp
             sentencia.setString(4, chofer.getApellido2());  //? cuarto
-            sentencia.setString(5, chofer.getIdentificacion());  //? quinto
+            sentencia.setString(5, chofer.getIdentificacion());  //? quinto 
             sentencia.executeUpdate(); //ejecute Update
             
         }

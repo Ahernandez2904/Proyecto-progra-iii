@@ -8,7 +8,6 @@ public class Chofer {
     private String apellido2;
     private int IdChofer;
     private String identificacion;
-    private String ruta;
 
     public String getNombre() {
         return nombre;
@@ -40,14 +39,6 @@ public class Chofer {
 
     public void setIdChofer(int IdChofer) {
         this.IdChofer = IdChofer;
-    }
-
-    public String getRuta() {
-        return ruta;
-    }
-
-    public void setRuta(String ruta) {
-        this.ruta = ruta;
     }
 
     public String getIdentificacion() {

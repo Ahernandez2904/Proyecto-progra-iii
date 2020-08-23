@@ -1,51 +1,44 @@
-<?xml version='1.0' encoding='UTF-8' ?> 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui">
-
     <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <link href="css/cssLayout.css" rel="stylesheet" type="text/css"/>
         <link href="css/default.css" rel="stylesheet" type="text/css"/>
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css" />
         <title>Pagina principal</title>
+        <div style="background-image: url('thumb2-volvo-9700-2019-passenger-bus-new-buses-travel-by-bus.jpg');"/>
     </h:head>
-
     <h:body>
-
         <div id="top">
-            <ui:insert name="top">Proyecto</ui:insert>   <!--Título -->
-            <div style="background-image: url('thumb2-volvo-9700-2019-passenger-bus-new-buses-travel-by-bus.jpg');">
+            <ui:insert name="top">Proyecto</ui:insert>   <!--Título -->           
+        </div>
+        <h:body>
+            <nav class="navegacion">
+                <ul class="menu">
+                    <li><a href="ingresar.xhtml">Ingresar Chofer</a></li>
+                    <li><a href="ingresarRuta.xhtml">Ingresar Ruta</a></li>
+                    <li><a href="verChofer.xhtml">Ver Chofer</a></li>
+                    <li><a href="verRuta.xhtml">Ver Ruta</a></li>
+                    <li><a href="cobro.xhtml">Cobro</a></li>
+                </ul>
+            </nav>
+        </h:body> 
+        <div>
+            <div id="left">   <!-- Menú al lado izquierdo-->
+                <ui:insert name="left">
+                </ui:insert>
             </div>
             <div>
-                <div id="left">   <!-- Menú al lado izquierdo-->
-                    <ui:insert name="left">
-                        <p:menu style="width: 100%;"> <!--Si sale el bombillo agregar la de add p = http: primefaces.org bla bla bla-->
-                            <p:submenu label="Acciones">   <!--Menu con un submenu y sus URL-->
-                                <p:menuitem value="Ingresar Chofer" icon="ui-icon-plus" url="ingresar.xhtml"/>
-                                <p:menuitem value="Ingresar Ruta" icon="ui-icon-plus" url="ingresarRuta.xhtml"/>
-                                <p:menuitem value="Cobro" icon="ui-icon-plus" url="cobro.xhtml"/>
-                                <p:menuitem value="Visualizar Chofer" icon="ui-icon-document" url="verChofer.xhtml"/>
-                                <p:menuitem value="Visualizar Ruta" icon="ui-icon-document" url="verRutas.xhtml"/>
-                              
-                            </p:submenu>
-                        </p:menu>
-                    </ui:insert>
+                <div id="right">   <!-- Eliminar lo que va dentro de >< -->
+                    <ui:insert name="right"></ui:insert>
                 </div>
-                <div>
-                    <div id="right">   <!-- Eliminar lo que va dentro de >< -->
-                        <ui:insert name="right"></ui:insert>
-                    </div>
-                    <div id="content" class="right_content">
-                        <ui:insert name="content"></ui:insert>
-                    </div>
+                <div id="content" class="right_content">
+                    <ui:insert name="content"></ui:insert>
                 </div>
-            </div> 
+            </div>
         </div>  
     </h:body>
 </html>
-
-
-
