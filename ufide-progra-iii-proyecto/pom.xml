@@ -18,16 +18,21 @@
     
     <dependencies>
         <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>javax.faces</artifactId>
+            <version>2.2.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.primefaces</groupId>
+            <artifactId>primefaces</artifactId>
+            <version>7.0</version>
+        </dependency>
+        <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-api</artifactId>
             <version>${jakartaee}</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>  <!-- Se agrega aqui-->
-            <groupId>org.primefaces</groupId>  
-            <artifactId>primefaces</artifactId>
-            <version>7.0</version>
-        </dependency>  <!--hasta aqui -->
     </dependencies>
     
      <build>
