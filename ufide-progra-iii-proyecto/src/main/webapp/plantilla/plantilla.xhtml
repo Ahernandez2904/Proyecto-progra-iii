@@ -17,6 +17,7 @@
 
         <div id="top">
             <ui:insert name="top">Primefaces</ui:insert>   <!--Título -->
+            <div style="background-image: url('thumb2-volvo-9700-2019-passenger-bus-new-buses-travel-by-bus.jpg');">
         </div>
         <div>
             <div id="left">   <!-- Menú al lado izquierdo-->
@@ -24,11 +25,10 @@
                     <p:menu style="width: 100%;"> <!--Si sale el bombillo agregar la de add p = http: primefaces.org bla bla bla-->
                         <p:submenu label="Acciones">   <!--Menu con un submenu y sus URL-->
                             <p:menuitem value="Ingresar Chofer" icon="ui-icon-plus" url="ingresar.xhtml"/>
-                            <p:menuitem value="Ingresar Ruta" icon="ui-icon-plus" url="ingresar.xhtml"/>
-                            <p:menuitem value="Cobro" icon="ui-icon-plus" url="ingresar.xhtml"/>
-                            <p:menuitem value="Descuento" icon="ui-icon-plus" url="ingresar.xhtml"/>
-                            <p:menuitem value="Visualizar Chofer" icon="ui-icon-document" url="verPersonas.xhtml"/>
-                            <p:menuitem value="Visualizar Ruta" icon="ui-icon-document" url="verPersonas.xhtml"/>
+                            <p:menuitem value="Ingresar Ruta" icon="ui-icon-plus" url="ingresarRuta.xhtml"/>
+                            <p:menuitem value="Cobro" icon="ui-icon-plus" url="cobro.xhtml"/>
+                            <p:menuitem value="Visualizar Chofer" icon="ui-icon-document" url="verChofer.xhtml"/>
+                            <p:menuitem value="Visualizar Ruta" icon="ui-icon-document" url="verRutas.xhtml"/>
                             <p:menuitem value="Salir" icon="ui-icon-document" url="verPersonas.xhtml"/>
                         </p:submenu>
                     </p:menu>

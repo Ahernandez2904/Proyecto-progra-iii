@@ -1,18 +1,16 @@
-
 package dao;
 
-
 public class Ruta {
-    
-   private String IdRuta;
-   private String horario;
-   private String chofer;
 
-    public String getIdRuta() {
+    private int IdRuta;
+    private String horario;
+    private int chofer;
+
+    public int getIdRuta() {
         return IdRuta;
     }
 
-    public void setIdRuta(String IdRuta) {
+    public void setIdRuta(int IdRuta) {
         this.IdRuta = IdRuta;
     }
 
@@ -24,15 +22,12 @@ public class Ruta {
         this.horario = horario;
     }
 
-    public String getChofer() {
+    public int getChofer() {
         return chofer;
     }
 
-    public void setChofer(String chofer) {
+    public void setChofer(int chofer) {
         this.chofer = chofer;
     }
-   
-   
-    
-    
+
 }
