@@ -44,7 +44,7 @@ public class BuscarChofer extends Chofer {
         return "buscar";
     }
 
-    public String actualizarPersona() {
+    public String actualizarChofer() {
         choferRepositorio.actualizarChofer(this);
         return "buscar";
     }

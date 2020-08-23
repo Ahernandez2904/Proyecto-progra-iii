@@ -11,7 +11,7 @@
                         <h:outputLabel value="Identificación" for="id" class="col-sm-2 col-form-label"/>
                         <div class="col-sm-3">
                             <h:inputText id="buscarId" required="true" requiredMessage="Campo Obligatorio"
-                                         value="#{buscar.identificacionBuscar}" class="form-control">
+                                         value="#{buscar.buscarIdentificacion}" class="form-control">
                             </h:inputText>
                             <h:message for="id" class="text-danger"/>
                         </div>
@@ -22,7 +22,7 @@
                     </div>
                 </h:form>
                 <h:form>
-                    <h:inputHidden value="#{buscar.idPersona}"/>
+                    <h:inputHidden value="#{buscar.idChofer}"/>
                     <div class="form-group-row">
                         <h:outputLabel value="Identificación" for="id" class="col-sm-2 col-form-label"/>
                         <div class="col-sm-3">
@@ -57,9 +57,9 @@
                         </div>
                     </div>
                     <div style="text-align: center">
-                        <h:commandButton value="Eliminar" action="#{buscar.eliminarPersona()}" class="btn btn-danger"
+                        <h:commandButton value="Eliminar" action="#{buscar.eliminarChofer()}" class="btn btn-danger"
                                          style="margin-right: 15px;"/>
-                        <h:commandButton value="Actualizar" action="#{buscar.actualizarPersona()}" class="btn btn-secondary"/>
+                        <h:commandButton value="Actualizar" action="#{buscar.actualizarChofer()}" class="btn btn-secondary"/>
                     </div>
                 </h:form>
             </ui:define>
