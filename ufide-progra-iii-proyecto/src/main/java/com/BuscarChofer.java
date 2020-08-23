@@ -5,17 +5,17 @@
  */
 package com;
 
-import dao.Persona;
-import dao.PersonaRepositorio;
+import dao.Chofer;
+import dao.ChoferRepositorio;
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
 
-
 @Named(value = "buscar")
 @RequestScoped
-public class BuscarChofer extends Persona{
+public class BuscarChofer extends Chofer {
+
     private String identificacionBuscar; //get y set solo a este
-    private PersonaRepositorio personaRepositorio = new PersonaRepositorio();  //agregamos esto
+    private ChoferRepositorio choferRepositorio = new ChoferRepositorio();  //agregamos esto
 
     public String getIdentificacionBuscar() {
         return identificacionBuscar;
@@ -25,28 +25,27 @@ public class BuscarChofer extends Persona{
         this.identificacionBuscar = identificacionBuscar;
     }
 
-   
     public BuscarChofer() {
     }
-    
-    public String buscarIdentificacion(){  //esto es para conectar el CRUD, "rodilla"
-        Persona persona = personaRepositorio.leerPersona(this.getIdentificacionBuscar());  //leerPersona lo habiamos puesto en PersonaRepositorio
-        this.setIdPersona(persona.getIdPersona());
-        this.setNombre(persona.getNombre());
-        this.setApellido1(persona.getApellido1());
-        this.setApellido2(persona.getApellido2());
-        this.setIdentificacion(persona.getIdentificacion());
+
+    public String buscarIdentificacion() {  //esto es para conectar el CRUD, "rodilla"
+        Chofer chofer = choferRepositorio.leerChofer(this.getIdentificacionBuscar());  //leerPersona lo habiamos puesto en PersonaRepositorio
+        this.setIdChofer(chofer.getIdChofer());
+        this.setNombre(chofer.getNombre());
+        this.setApellido1(chofer.getApellido1());
+        this.setApellido2(chofer.getApellido2());
+        this.setIdentificacion(chofer.getIdentificacion());
         this.setIdentificacionBuscar("");
         return "buscar";
     }
-    
-    public String eliminarPersona(){
-        personaRepositorio.eliminarPersona(this);
+
+    public String eliminarChofer() {
+        choferRepositorio.eliminarChofer(this);
         return "buscar";
     }
-    
-    public String actualizarPersona(){
-        personaRepositorio.actualizarPersona(this);
+
+    public String actualizarPersona() {
+        choferRepositorio.actualizarChofer(this);
         return "buscar";
     }
 }
