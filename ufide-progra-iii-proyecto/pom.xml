@@ -33,6 +33,11 @@
             <version>${jakartaee}</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>net.bootsfaces</groupId>
+            <artifactId>bootsfaces</artifactId>
+            <version>0.7.0</version>
+        </dependency>
     </dependencies>
     
     <build>

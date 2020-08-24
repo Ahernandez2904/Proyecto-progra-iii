@@ -10,11 +10,11 @@
         <ui:composition template="./plantilla/plantilla.xhtml">
             <ui:define name="content">
                 <h:form class="container" style="width: 100%">
-                    <h1>
+                    <h2>
                         Cobro: Menores de Edad
-                    </h1>
+                    </h2>
                     <div class="form-group row">
-                        <h:outputLabel value="Numero" for="id" class="col-sm-1 col-form-label"/>
+                        <h:outputLabel value="Número " for="id" class="col-sm-1 col-form-label"/>
                         <div class="col-sm-3">
                             <h:inputText id="menor" required="true" requiredMessage="Digite la cantidad de menores de edad" 
                                          value="#{costo.menor}" class="form-control" validatorMessage="Debe ser un dígito">
@@ -28,11 +28,11 @@
                         </div>
                     </div>
                     <hr/>
-                    <h1>
+                    <h2>
                         Cobro: Ciudadano de Oro
-                    </h1>
+                    </h2>
                     <div class="form-group row">
-                        <h:outputLabel value="Numero" for="id" class="col-sm-1 col-form-label"/>
+                        <h:outputLabel value="Número " for="id" class="col-sm-1 col-form-label"/>
                         <div class="col-sm-3">
                             <h:inputText id="oro" required="true" requiredMessage="Digite la cantidad de Ciudadanos de Oro" 
                                          value="#{costo.oro}" class="form-control" validatorMessage="Debe ser un dígito">
@@ -45,11 +45,11 @@
                         </div>
                     </div>
                     <hr/>           
-                    <h1>
+                    <h2>
                         Cobro: Adulto
-                    </h1>
+                    </h2>
                     <div class="form-group row">
-                        <h:outputLabel value="Numero" for="id" class="col-sm-1 col-form-label"/>
+                        <h:outputLabel value="Número " for="id" class="col-sm-1 col-form-label"/>
                         <div class="col-sm-3">
                             <h:inputText id="mayor" required="true" requiredMessage="Digite la cantidad de Adultos"
                                          value="#{costo.mayor}" class="form-control" validatorMessage="Debe ser un dígito">   
