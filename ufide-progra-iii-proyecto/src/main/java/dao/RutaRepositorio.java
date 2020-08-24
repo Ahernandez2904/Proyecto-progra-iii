@@ -47,7 +47,7 @@ public class RutaRepositorio {
         Ruta ruta = null;
         try {
             String consulta = "SELECT IDRUTA, HORARIO, IDENTRUTA"
-                    + " FROM RUTA WHERE IDRUTA = ?";   //buscar de persona donde la id sea a ? (lo que se ponga en los datos de abajo)
+                    + " FROM RUTA WHERE IDENTRUTA = ?";   //buscar de persona donde la id sea a ? (lo que se ponga en los datos de abajo)
             PreparedStatement sentencia = Conexion.getConexion().prepareStatement(consulta);
             sentencia.setString(1, identruta);  //leer esta fila con el unico 1 de identificacion
             ResultSet rs = sentencia.executeQuery();   //ejecute Query
@@ -65,7 +65,7 @@ public class RutaRepositorio {
 
     //READ   
     public List<Ruta> leerRuta() {   //este es para obtener varias personas
-        List<Ruta> listaRuta = new ArrayList<>();
+        List<Ruta> listaRutas = new ArrayList<>();
         try {
             String consulta = "SELECT IDRUTA, HORARIO, IDENTRUTA FROM RUTA";  //poner from siempre para saber que tabla vamos a usar
             PreparedStatement sentencia = Conexion.getConexion().prepareStatement(consulta);
@@ -75,12 +75,12 @@ public class RutaRepositorio {
                 ruta.setIdRuta(rs.getInt("IDRUTA"));  //obtener datos IDPersona, abajo,nombre, apellido1 y asi con los otros y los datos que deseemos
                 ruta.setHorario(rs.getString("HORARIO"));
                 ruta.setIdentRuta(rs.getString("IDENTRUTA"));
-                listaRuta.add(ruta);  //objeto persona que instanciamos arriba
+                listaRutas.add(ruta);  //objeto persona que instanciamos arriba
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-        return listaRuta;
+        return listaRutas;
     }
 
     //UPDATE

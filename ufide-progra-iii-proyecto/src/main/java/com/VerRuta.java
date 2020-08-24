@@ -12,11 +12,10 @@ import javax.enterprise.context.RequestScoped;
 @Named(value = "verRuta")
 @RequestScoped
 public class VerRuta extends Ruta {
-
-    private List<Ruta> listaRuta = new ArrayList<Ruta>();
+    private List<Ruta> listaRutas = new ArrayList<Ruta>();
 
     public List<Ruta> getListaRuta() {
-        return listaRuta;
+        return listaRutas;
     }
 
     public VerRuta() {
@@ -25,7 +24,7 @@ public class VerRuta extends Ruta {
     @PostConstruct //esteroides a un metodo
     public void init() { //este es para ver todos
         RutaRepositorio rutaRepositorio = new RutaRepositorio();
-        this.listaRuta = rutaRepositorio.leerRuta();
+        this.listaRutas = rutaRepositorio.leerRuta();
     }
 
 }

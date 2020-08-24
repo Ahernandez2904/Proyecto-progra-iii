@@ -22,7 +22,7 @@ public class IngresarRuta extends Ruta{
     public IngresarRuta() {   
     }
     
-    public String guardarInformacion(){   //ver varios valores
+    public String guardarInformacionRuta(){   //ver varios valores
         RutaRepositorio rutaRepositorio = new RutaRepositorio();  //lo llamamos del metodo ingresar.xhtml va a recibir los valores y lo va ir a guardar en Base de Datos, crearPersona ingresa los valores a DB 
         rutaRepositorio.crearRuta(this);
         return "verRuta";

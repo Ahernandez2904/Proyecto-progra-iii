@@ -10,11 +10,11 @@
                 <h:form>
                     <p:dataTable var="ruta" value="#{verRuta.listaRuta}" rows="3"
                                  paginator="true">
-                        <p:column headerText="Horario">
-                            <h:outputText value="#{ruta.horario}"/>
-                        </p:column>
                         <p:column headerText="Identificacion">
                             <h:outputText value="#{ruta.identRuta}"/>
+                        </p:column>  
+                        <p:column headerText="Horario">
+                            <h:outputText value="#{ruta.horario}"/>
                         </p:column>
                     </p:dataTable>
                 </h:form>
