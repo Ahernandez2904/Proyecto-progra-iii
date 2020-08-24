@@ -10,21 +10,32 @@
     <h:body>
         <ui:composition template="./plantilla/plantilla.xhtml">
             <ui:define name="content">
-                <h1>Sistema de Transporte</h1>
+                <h2>Sistema de Transporte</h2>
                 <p>Proyecto Universitario</p>
-                <div class="form-group-row">                 
-                    <p>Este sistema nos ayuda a tener un control con las rutas creadas o ya existentes, asi como con los choferes de la empresa</p>
-                    <ul>
-                        <li>Alejandro Hernandez</li>
-                        <li>Valeria Matamoros</li>
-                    </ul>
-                </div>
-                <p:clock pattern="HH:mm:ss dd.MM.yyyy" />
+                <p>Este sistema nos ayuda a tener un control con las rutas creadas o ya existentes, así como con los choferes de la empresa.</p>
+                <p>Estudiantes: Alejandro Hernandez y Valeria Matamoros.</p>
+                <h3>Hora</h3>
+                <p:clock pattern="HH:mm:ss dd.MM.yyyy" /><br></br><br></br>
                 <div>
-                    <p:carousel autoPlayInterval="2000" responsive="true" effect="easeOut" circular="true" itemStyle="width:200px" >
-                        <p:graphicImage value="/img/bus.jpg"/>
-                        <p:graphicImage value="/img/bus2.jpg"/>
-                        <p:graphicImage value="/img/bus3.jpg"/>
+                    <p:carousel rows="1" autoPlayInterval="5000" responsive="true" effect="easeOut" circular="true" itemStyle="max-width: 100%;" >
+                        <p:tab>
+                            <h:panelGrid columns="2" styleClass="ui-panelgrid-blank ui-fluid">
+                                <p:graphicImage value="/img/bus.jpg" height="150px"/>
+                                <h:outputText value="Brindamos un servicio excelente" />
+                            </h:panelGrid>
+                        </p:tab>
+                        <p:tab>
+                            <h:panelGrid columns="2" styleClass="ui-panelgrid-blank ui-fluid">
+                                <p:graphicImage value="/img/bus2.jpg" height="150px"/>
+                                <h:outputText value="Nuestros buses poseen todo tipo de comodidades, y asientos cómodos para usted" />
+                            </h:panelGrid>
+                        </p:tab>
+                        <p:tab>
+                            <h:panelGrid columns="2" styleClass="ui-panelgrid-blank ui-fluid" >
+                                <p:graphicImage value="/img/bus3.jpg" height="150px"/>
+                                <h:outputText value="En estos tiempos todos tenemos que cuidarnos, recuerda usar una mascarilla al montarte en nuestros trasnportes" />
+                            </h:panelGrid>
+                        </p:tab>
                     </p:carousel>
                 </div>
             </ui:define>
