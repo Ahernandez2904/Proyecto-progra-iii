@@ -5,10 +5,8 @@
  */
 package dao;
 
-/**
- *
- * @author valer
- */
+//POJO 
+
 public class Bus {
     private String placa;
     private String marca;
