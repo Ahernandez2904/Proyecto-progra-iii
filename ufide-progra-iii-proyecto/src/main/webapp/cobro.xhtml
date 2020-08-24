@@ -14,16 +14,17 @@
                         Cobro: Menores de Edad
                     </h2>
                     <div class="form-group row">
-                        <h:outputLabel value="Número " for="id" class="col-sm-1 col-form-label"/>
-                        <div class="col-sm-3">
+                        <h:outputLabel value="Número " for="id" class="col-sm-12 col-form-label"/>
+                        <div class="col-sm-12">
                             <h:inputText id="menor" required="true" requiredMessage="Digite la cantidad de menores de edad" 
-                                         value="#{costo.menor}" class="form-control" validatorMessage="Debe ser un dígito">
+                                         value="#{costo.menor}" class="form-control" validatorMessage="Debe ser un dígito"
+                                         style="max-width: 250px;">
                                 <p:ajax event="blur" process="menor" listener="#{costo.cobrarMenor()}" update="mensajeMenor"/>
                                 <f:validateRegex pattern="[0-9]+"></f:validateRegex> 
                             </h:inputText>
 
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-12">
                             <h:outputText id="mensajeMenor" value="#{costo.costo}"/>
                         </div>
                     </div>
@@ -32,15 +33,16 @@
                         Cobro: Ciudadano de Oro
                     </h2>
                     <div class="form-group row">
-                        <h:outputLabel value="Número " for="id" class="col-sm-1 col-form-label"/>
-                        <div class="col-sm-3">
+                        <h:outputLabel value="Número " for="id" class="col-sm-12 col-form-label"/>
+                        <div class="col-sm-12">
                             <h:inputText id="oro" required="true" requiredMessage="Digite la cantidad de Ciudadanos de Oro" 
-                                         value="#{costo.oro}" class="form-control" validatorMessage="Debe ser un dígito">
+                                         value="#{costo.oro}" class="form-control" validatorMessage="Debe ser un dígito" 
+                                         style="max-width: 250px;" >
                                 <p:ajax event="blur" process="oro" listener="#{costo.cobrarOro()}" update="mensajeCiudadano"/>   
                                 <f:validateRegex pattern="[0-9]+"></f:validateRegex> 
                             </h:inputText>
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-12">
                             <h:outputText id="mensajeCiudadano" value="#{costo.costoCiudadano}"/>
                         </div>
                     </div>
@@ -49,15 +51,16 @@
                         Cobro: Adulto
                     </h2>
                     <div class="form-group row">
-                        <h:outputLabel value="Número " for="id" class="col-sm-1 col-form-label"/>
-                        <div class="col-sm-3">
+                        <h:outputLabel value="Número " for="id" class="col-sm-12 col-form-label"/>
+                        <div class="col-sm-12">
                             <h:inputText id="mayor" required="true" requiredMessage="Digite la cantidad de Adultos"
-                                         value="#{costo.mayor}" class="form-control" validatorMessage="Debe ser un dígito">   
+                                         value="#{costo.mayor}" class="form-control" validatorMessage="Debe ser un dígito"
+                                         style="max-width: 250px;" >   
                                 <p:ajax event="blur" process="mayor" listener="#{costo.cobrarAdulto()}" update="mensajeAdulto"/>                                        
                                 <f:validateRegex pattern="[0-9]+"></f:validateRegex>  
                             </h:inputText>    
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-12">
                             <h:outputText id="mensajeAdulto" value="#{costo.costoAdulto}"/>
                         </div>
                     </div>

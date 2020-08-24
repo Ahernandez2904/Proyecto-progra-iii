@@ -8,40 +8,41 @@
     <body>
         <ui:composition template="./plantilla/plantilla.xhtml">
             <ui:define name="content">
-                <h:form class="container" style="width: 100%">
-                    <div class="form-group-row">
-                        <h:outputLabel value="Identificacion" for="id" class="col-sm-2 col-form-label"/>
-                        <div class="col-sm-3">
+                <h:form class="container" style="width: 100%;">
+                    <div class="form-group-row" >
+                        <h:outputLabel value="Identificacion" for="id" class="col-sm-12 col-form-label"/>
+                        <div class="col-sm-12">
                             <h:inputText id="id" required="true" requiredMessage="Campo Obligatorio"
-                                         value="#{ingresar.identificacion}" class="form-control">
+                                         value="#{ingresar.identificacion}" style="max-width: 250px;" class="form-control">
                             </h:inputText>
                             <h:message for="id" class="text-danger"/>
                         </div>
                     </div>
                     <div class="form-group-row">
-                        <h:outputLabel value="Nombre" for="nombre" class="col-sm-2 col-form-label"/>
-                        <div class="col-sm-3">
+                        <h:outputLabel value="Nombre" for="nombre" class="col-sm-12 col-form-label"/>
+                        <div class="col-sm-12">
                             <h:inputText id="nombre" required="true" requiredMessage="Campo Obligatorio"
-                                         value="#{ingresar.nombre}" class="form-control"/>
+                                         value="#{ingresar.nombre}" style="max-width: 250px;" class="form-control"/>
                             <h:message for="nombre" class="text-danger"/>
                         </div>
                     </div>
                     <div class="form-group-row">
-                        <h:outputLabel value="Primer Apellido" for="primerApellido" class="col-sm-2 col-form-label"/>
-                        <div class="col-sm-3">
+                        <h:outputLabel value="Primer Apellido" for="primerApellido" class="col-sm-12 col-form-label"/>
+                        <div class="col-sm-12">
                             <h:inputText id="primerApellido" required="true" requiredMessage="Campo Obligatorio"
-                                         value="#{ingresar.apellido1}" class="form-control"/>
+                                         value="#{ingresar.apellido1}" style="max-width: 250px;" class="form-control"/>
                             <h:message for="primerApellido" class="text-danger"/>
                         </div>
                     </div>
                     <div class="form-group-row">
-                        <h:outputLabel value="Segundo Apellido" for="segundoApellido" class="col-sm-2 col-form-label"/>
-                        <div class="col-sm-3">
+                        <h:outputLabel value="Segundo Apellido" for="segundoApellido" class="col-sm-12 col-form-label"/>
+                        <div class="col-sm-12">
                             <h:inputText id="segundoApellido" required="true" requiredMessage="Campo Obligatorio"
-                                         value="#{ingresar.apellido2}" class="form-control"/>
+                                         value="#{ingresar.apellido2}" style="max-width: 250px;" class="form-control"/>
                             <h:message for="segundoApellido" class="text-danger"/>
                         </div>
                     </div>
+                    <br></br><br></br>
                     <div style="text-align: center">
                         <h:commandButton id="bloquearBoton" value="Guardar" action="#{ingresar.guardarInformacion()}"
                                          class="btn btn-primary"/>
