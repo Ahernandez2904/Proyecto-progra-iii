@@ -1,11 +1,13 @@
 dao\ChoferRepositorio.class
 com\VerChofer.class
 dao\Precio.class
+com\BuscarRuta.class
 com\IngresarRuta.class
 dao\Bus.class
 prograiii\ufide\progra\iii\proyecto\resources\JavaEE8Resource.class
 com\Ingresar.class
 prograiii\ufide\progra\iii\proyecto\JAXRSConfiguration.class
+com\BuscarChofer.class
 dao\Ruta.class
 dao\Conexion.class
 dao\RutaRepositorio.class

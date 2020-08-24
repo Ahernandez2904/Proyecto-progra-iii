@@ -31,7 +31,7 @@ public class Conexion {
         }
         return connectionBD;
     }
-    
+
 }
 //Clase normal llamada Conexion
 //
