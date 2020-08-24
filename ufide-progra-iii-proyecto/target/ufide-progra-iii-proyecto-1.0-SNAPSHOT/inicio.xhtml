@@ -4,10 +4,10 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui">
-    <head>
+    <h:head>
         <meta http-equiv="refresh" content="0; url=faces/inicio.xhtml" />  
-    </head>
-    <body>
+    </h:head>
+    <h:body>
         <ui:composition template="./plantilla/plantilla.xhtml">
             <ui:define name="content">
                 <h1>Sistema de Transporte</h1>
@@ -19,15 +19,14 @@
                         <li>Valeria Matamoros</li>
                     </ul>
                 </div>
-                <!--<div>
-                    <p:carousel autoPlayInterval="2000" responsive="true" effect="easeOut" circular="true" itemStyle=”width:200px” >
-                        <p:graphicImage value="bus.jpg"/>
-                        <p:graphicImage value="/images/nature2.jpg"/>
-                        <p:graphicImage value="/images/nature3.jpg"/>
-                        <p:graphicImage value="/images/nature4.jpg"/>
+                <div>
+                    <p:carousel autoPlayInterval="2000" responsive="true" effect="easeOut" circular="true" itemStyle="width:200px" >
+                        <p:graphicImage value="/img/bus.jpg"/>
+                        <p:graphicImage value="/img/bus2.jpg"/>
+                        <p:graphicImage value="/img/bus3.jpg"/>
                     </p:carousel>
-                </div>-->
+                </div>
             </ui:define>
         </ui:composition>
-    </body>
+    </h:body>
 </html>
