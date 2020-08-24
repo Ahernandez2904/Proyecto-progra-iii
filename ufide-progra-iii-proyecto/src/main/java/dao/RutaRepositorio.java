@@ -43,19 +43,19 @@ public class RutaRepositorio {
     }
 
     //READ
-    public Ruta leerRuta(String identificacionRuta) {  //(String identificacion)vamos a obtener de la fila que coincida con el valor que le estemos poniendo en en string y en sentencia.setString
+    public Ruta leerRuta(String identruta) {  //(String identificacion)vamos a obtener de la fila que coincida con el valor que le estemos poniendo en en string y en sentencia.setString
         Ruta ruta = null;
         try {
             String consulta = "SELECT IDRUTA, HORARIO, IDENTRUTA"
                     + " FROM RUTA WHERE IDRUTA = ?";   //buscar de persona donde la id sea a ? (lo que se ponga en los datos de abajo)
             PreparedStatement sentencia = Conexion.getConexion().prepareStatement(consulta);
-            sentencia.setString(1, identificacionRuta);  //leer esta fila con el unico 1 de identificacion
+            sentencia.setString(1, identruta);  //leer esta fila con el unico 1 de identificacion
             ResultSet rs = sentencia.executeQuery();   //ejecute Query
             while (rs.next()) {  //loop para que recorra todas las filas con identificacion
                 ruta = new Ruta();
                 ruta.setIdRuta(rs.getInt("IDRUTA"));  //obtener datos IDPersona, abajo,nombre, apellido1 y asi con los otros y los datos que deseemos
                 ruta.setHorario(rs.getString("HORARIO"));
-                ruta.setHorario(rs.getString("IDENTRUTA"));
+                ruta.setIdentRuta(rs.getString("IDENTRUTA"));
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -74,7 +74,7 @@ public class RutaRepositorio {
                 Ruta ruta = new Ruta();
                 ruta.setIdRuta(rs.getInt("IDRUTA"));  //obtener datos IDPersona, abajo,nombre, apellido1 y asi con los otros y los datos que deseemos
                 ruta.setHorario(rs.getString("HORARIO"));
-                ruta.setHorario(rs.getString("IDENTRUTA"));
+                ruta.setIdentRuta(rs.getString("IDENTRUTA"));
                 listaRuta.add(ruta);  //objeto persona que instanciamos arriba
             }
         } catch (SQLException e) {
@@ -86,12 +86,12 @@ public class RutaRepositorio {
     //UPDATE
     public Boolean actualizarRuta(Ruta ruta) { //para actualizar
         try {
-            String consulta = "UPDATE RUTA SET IDRUTA= ?, HORARIO = ?, IDENTRUTA = ?"
+            String consulta = "UPDATE RUTA SET HORARIO = ?, IDENTRUTA = ?"
                     + " WHERE IDRUTA = ?";   //con los ? porque los vamos a actualizar, poner where siempre
             PreparedStatement sentencia = Conexion.getConexion().prepareStatement(consulta);
-            sentencia.setInt(1, ruta.getIdRuta());
-            sentencia.setString(2, ruta.getHorario());
-            sentencia.setString(3, ruta.getIdentRuta());
+            sentencia.setString(1, ruta.getHorario());
+            sentencia.setString(2, ruta.getIdentRuta());
+            sentencia.setInt(3, ruta.getIdRuta());
             sentencia.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e.getMessage());

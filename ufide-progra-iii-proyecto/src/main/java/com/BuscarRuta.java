@@ -5,7 +5,6 @@
  */
 package com;
 
-
 import dao.RutaRepositorio;
 import dao.Ruta;
 import javax.inject.Named;
@@ -33,6 +32,7 @@ public class BuscarRuta extends Ruta {
         Ruta ruta = rutaRepositorio.leerRuta(this.getIdentificacionBuscarRuta());  //leerPersona lo habiamos puesto en PersonaRepositorio
         this.setIdRuta(ruta.getIdRuta());
         this.setHorario(ruta.getHorario());
+        this.setIdentRuta(ruta.getIdentRuta());
         this.setIdentificacionBuscarRuta("");
         return "buscarRuta";
     }

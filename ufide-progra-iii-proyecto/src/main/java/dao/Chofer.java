@@ -2,12 +2,20 @@ package dao;
 
 // POJO = Plain Old Java Object: Proposito tener atributos y metodos, anotaciones son las que viene con el @ 
 public class Chofer {
-
+    
+    private int IdChofer;
     private String nombre;
     private String apellido1;
-    private String apellido2;
-    private int IdChofer;
+    private String apellido2;  
     private String identificacion;
+
+    public int getIdChofer() {
+        return IdChofer;
+    }
+
+    public void setIdChofer(int IdChofer) {
+        this.IdChofer = IdChofer;
+    }
 
     public String getNombre() {
         return nombre;
@@ -33,14 +41,6 @@ public class Chofer {
         this.apellido2 = apellido2;
     }
 
-    public int getIdChofer() {
-        return IdChofer;
-    }
-
-    public void setIdChofer(int IdChofer) {
-        this.IdChofer = IdChofer;
-    }
-
     public String getIdentificacion() {
         return identificacion;
     }
@@ -48,5 +48,7 @@ public class Chofer {
     public void setIdentificacion(String identificacion) {
         this.identificacion = identificacion;
     }
+
+  
 
 }

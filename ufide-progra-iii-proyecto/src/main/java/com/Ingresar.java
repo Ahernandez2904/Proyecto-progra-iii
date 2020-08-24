@@ -25,6 +25,6 @@ public class Ingresar extends Chofer {
     public String guardarInformacion(){   //ver varios valores
         ChoferRepositorio choferRepositorio = new ChoferRepositorio();  //lo llamamos del metodo ingresar.xhtml va a recibir los valores y lo va ir a guardar en Base de Datos, crearPersona ingresa los valores a DB 
         choferRepositorio.crearChofer(this);
-        return "verPersonas";
+        return "verChofer";
     }
 }

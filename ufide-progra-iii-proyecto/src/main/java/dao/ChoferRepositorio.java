@@ -30,7 +30,7 @@ public class ChoferRepositorio {
     //CREATE
     public Boolean crearChofer(Chofer chofer){  //clase persona, en clase persona vienen los mismas variables
         try{
-            String consulta = "INSERT INTO Chofer (IDChofer, NOMBRE, APELLIDO1, APELLIDO2, IDENTIFICACION)"
+            String consulta = "INSERT INTO CHOFER (IDCHOFER, NOMBRE, APELLIDO1, APELLIDO2, IDENTIFICACION)"
                     + " VALUES(?, ?, ?, ?, ?)";   //los ? es para agregar valores
             PreparedStatement sentencia = Conexion.getConexion().prepareStatement(consulta);
             sentencia.setInt(1, obtenerIdChofer());   //setear id, primer ? obtener valor
