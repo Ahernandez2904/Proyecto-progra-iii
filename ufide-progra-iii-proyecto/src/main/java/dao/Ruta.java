@@ -4,6 +4,7 @@ public class Ruta {
 
     private int IdRuta;
     private String horario;
+    private String identRuta;
 
     public int getIdRuta() {
         return IdRuta;
@@ -19,6 +20,14 @@ public class Ruta {
 
     public void setHorario(String horario) {
         this.horario = horario;
+    }
+
+    public String getIdentRuta() {
+        return identRuta;
+    }
+
+    public void setIdentRuta(String identRuta) {
+        this.identRuta = identRuta;
     }
 
 }

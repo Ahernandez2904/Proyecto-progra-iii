@@ -8,7 +8,7 @@
             <ui:define name="content">
                 <h:form class="container" style="width: 100%">
                     <div class="form-group-row">
-                        <h:outputLabel value="Identificación Ruta" for="id" class="col-sm-2 col-form-label"/>
+                        <h:outputLabel value="Identificación" for="id" class="col-sm-2 col-form-label"/>
                         <div class="col-sm-3">
                             <h:inputText id="buscarId" required="true" requiredMessage="Campo Obligatorio"
                                          value="#{buscarRuta.identificacionBuscarRuta}" class="form-control">
@@ -27,7 +27,7 @@
                         <h:outputLabel value="Identificación Ruta" for="id" class="col-sm-2 col-form-label"/>
                         <div class="col-sm-3">
                             <h:inputText id="id" required="true" requiredMessage="Campo Obligatorio"
-                                         value="#{buscarRuta.idRuta}" class="form-control">
+                                         value="#{buscarRuta.identRuta}" class="form-control">
                             </h:inputText>
                             <h:message for="id" class="text-danger"/>
                         </div>

@@ -6,59 +6,63 @@
       xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 
-    <h:body>
-        <h:form class="container" style="width: 100%">
-            <h1>
-                Cobro: Menores de Edad
-            </h1>
-            <div class="form-group row">
-                <h:outputLabel value="Numero" for="id" class="col-sm-1 col-form-label"/>
-                <div class="col-sm-3">
-                    <h:inputText id="menor" required="true" requiredMessage="Digite la cantidad de menores de edad" 
-                                 value="#{costo.menor}" class="form-control" validatorMessage="Debe ser un dígito">
-                        <p:ajax event="blur" process="menor" listener="#{costo.cobrarMenor()}" update="mensajeMenor"/>
-                        <f:validateRegex pattern="[0-9]+"></f:validateRegex> 
-                    </h:inputText>
+    <body>
+        <ui:composition template="./plantilla/plantilla.xhtml">
+            <ui:define name="content">
+                <h:form class="container" style="width: 100%">
+                    <h1>
+                        Cobro: Menores de Edad
+                    </h1>
+                    <div class="form-group row">
+                        <h:outputLabel value="Numero" for="id" class="col-sm-1 col-form-label"/>
+                        <div class="col-sm-3">
+                            <h:inputText id="menor" required="true" requiredMessage="Digite la cantidad de menores de edad" 
+                                         value="#{costo.menor}" class="form-control" validatorMessage="Debe ser un dígito">
+                                <p:ajax event="blur" process="menor" listener="#{costo.cobrarMenor()}" update="mensajeMenor"/>
+                                <f:validateRegex pattern="[0-9]+"></f:validateRegex> 
+                            </h:inputText>
 
-                </div>
-                <div class="col-sm-3">
-                    <h:outputText id="mensajeMenor" value="#{costo.costo}"/>
-                </div>
-            </div>
-            <hr/>
-            <h1>
-                Cobro: Ciudadano de Oro
-            </h1>
-            <div class="form-group row">
-                <h:outputLabel value="Numero" for="id" class="col-sm-1 col-form-label"/>
-                <div class="col-sm-3">
-                    <h:inputText id="oro" required="true" requiredMessage="Digite la cantidad de Ciudadanos de Oro" 
-                                 value="#{costo.oro}" class="form-control" validatorMessage="Debe ser un dígito">
-                        <p:ajax event="blur" process="oro" listener="#{costo.cobrarOro()}" update="mensajeCiudadano"/>   
-                        <f:validateRegex pattern="[0-9]+"></f:validateRegex> 
-                    </h:inputText>
-                </div>
-                <div class="col-sm-3">
-                    <h:outputText id="mensajeCiudadano" value="#{costo.costoCiudadano}"/>
-                </div>
-            </div>
-            <hr/>           
-            <h1>
-                Cobro: Adulto
-            </h1>
-            <div class="form-group row">
-                <h:outputLabel value="Numero" for="id" class="col-sm-1 col-form-label"/>
-                <div class="col-sm-3">
-                    <h:inputText id="mayor" required="true" requiredMessage="Digite la cantidad de Adultos"
-                                 value="#{costo.mayor}" class="form-control" validatorMessage="Debe ser un dígito">   
-                        <p:ajax event="blur" process="mayor" listener="#{costo.cobrarAdulto()}" update="mensajeAdulto"/>                                        
-                        <f:validateRegex pattern="[0-9]+"></f:validateRegex>  
-                    </h:inputText>    
-                </div>
-                <div class="col-sm-3">
-                    <h:outputText id="mensajeAdulto" value="#{costo.costoAdulto}"/>
-                </div>
-            </div>
-        </h:form>  
-    </h:body>
+                        </div>
+                        <div class="col-sm-3">
+                            <h:outputText id="mensajeMenor" value="#{costo.costo}"/>
+                        </div>
+                    </div>
+                    <hr/>
+                    <h1>
+                        Cobro: Ciudadano de Oro
+                    </h1>
+                    <div class="form-group row">
+                        <h:outputLabel value="Numero" for="id" class="col-sm-1 col-form-label"/>
+                        <div class="col-sm-3">
+                            <h:inputText id="oro" required="true" requiredMessage="Digite la cantidad de Ciudadanos de Oro" 
+                                         value="#{costo.oro}" class="form-control" validatorMessage="Debe ser un dígito">
+                                <p:ajax event="blur" process="oro" listener="#{costo.cobrarOro()}" update="mensajeCiudadano"/>   
+                                <f:validateRegex pattern="[0-9]+"></f:validateRegex> 
+                            </h:inputText>
+                        </div>
+                        <div class="col-sm-3">
+                            <h:outputText id="mensajeCiudadano" value="#{costo.costoCiudadano}"/>
+                        </div>
+                    </div>
+                    <hr/>           
+                    <h1>
+                        Cobro: Adulto
+                    </h1>
+                    <div class="form-group row">
+                        <h:outputLabel value="Numero" for="id" class="col-sm-1 col-form-label"/>
+                        <div class="col-sm-3">
+                            <h:inputText id="mayor" required="true" requiredMessage="Digite la cantidad de Adultos"
+                                         value="#{costo.mayor}" class="form-control" validatorMessage="Debe ser un dígito">   
+                                <p:ajax event="blur" process="mayor" listener="#{costo.cobrarAdulto()}" update="mensajeAdulto"/>                                        
+                                <f:validateRegex pattern="[0-9]+"></f:validateRegex>  
+                            </h:inputText>    
+                        </div>
+                        <div class="col-sm-3">
+                            <h:outputText id="mensajeAdulto" value="#{costo.costoAdulto}"/>
+                        </div>
+                    </div>
+                </h:form> 
+            </ui:define>
+        </ui:composition>
+    </body>
 </html>

@@ -4,18 +4,15 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-    <head>
-        <meta http-equiv="refresh" content="0; url=faces/ingresar.xhtml" />
-    </head>
     <body>
         <ui:composition template="./plantilla/plantilla.xhtml">
             <ui:define name="content">
                 <h:form class="container" style="width: 100%">
                     <div class="form-group-row">
-                        <h:outputLabel value="IdentificaciónRuta" for="id" class="col-sm-2 col-form-label"/>
+                        <h:outputLabel value="Identificación" for="id" class="col-sm-2 col-form-label"/>
                         <div class="col-sm-3">
                             <h:inputText id="id" required="true" requiredMessage="Campo Obligatorio"
-                                         value="#{ingresarRuta.idRuta}" class="form-control">
+                                         value="#{ingresarRuta.identRuta}" class="form-control">
                             </h:inputText>
                             <h:message for="id" class="text-danger"/>
                         </div>
@@ -28,17 +25,8 @@
                             <h:message for="horario" class="text-danger"/>
                         </div>
                     </div>                 
-                     <div class="form-group-row">
-                        <h:outputLabel value="Chofer" for="id" class="col-sm-2 col-form-label"/>
-                        <div class="col-sm-3">
-                            <h:inputText id="id" required="true" requiredMessage="Campo Obligatorio"
-                                         value="#{ingresarRuta.chofer}" class="form-control">
-                            </h:inputText>
-                            <h:message for="id" class="text-danger"/>
-                        </div>
-                    </div>
                     <div style="text-align: center">
-                        <h:commandButton id="bloquearBoton" value="Guardar" action="#{ingresar.guardarInformacion()}"
+                        <h:commandButton id="bloquearBoton" value="Guardar" action="#{ingresarRuta.guardarInformacion()}"
                                          class="btn btn-primary"/>
                     </div>
                 </h:form>
