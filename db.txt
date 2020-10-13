@@ -1,0 +1,12 @@
+base de datos: transporte
+user: administrador
+no se si tiene contraseña pero la puedes buscar en el código
+
+Tabla CHOFER
+NOMBRE, APELLIDO1, APELLIDO 2 son VARCHAR 150
+IDENTIFICACION es VARCHAR 15
+IDCHOFER es INTEGER NOT NULL
+
+Tabla RUTA
+HORARIO, IDENTRUTA son VARCHAR 15
+IDRUTA es INTEGER NOT NULL
